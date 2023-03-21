@@ -16,7 +16,7 @@ namespace Calculator.ConsoleApp
                     Console.WriteLine("Podaj proszę 1 liczbę:");
                     var number1 = GetInput();
 
-                    Console.WriteLine("Jaką operację chcesz wykonać? Możliwe operacje to: '+', '-', '*', '/'.");
+                    Console.WriteLine("Jaką operację chcesz wykonać? Możliwe operacje to: '+', '-', '*', '/','sin','cos','tan'");
                     var operation = Console.ReadLine();
 
                     Console.WriteLine("Podaj proszę 2 liczbę:");
@@ -62,6 +62,12 @@ namespace Calculator.ConsoleApp
                     {
                         return number1 / number2;
                     }
+                case "sin":
+                    return Math.Sin(number1);
+                case "cos":
+                    return Math.Cos(number1);
+                case "tan":
+                    return Math.Tan(number1);
                 default:
                     throw new ArgumentException("Wybrałeś złą operację!\n");
             }
